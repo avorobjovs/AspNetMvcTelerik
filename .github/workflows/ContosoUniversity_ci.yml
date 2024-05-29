@@ -39,5 +39,5 @@ jobs:
       - name: Run Tests
         run: |
           cd ContosoUniversity
-          vstest.console.exe **.Tests.dll
+          vstest.console.exe ContosoUniversity.Tests\bin\Debug\ContosoUniversity.Tests.dll
 
