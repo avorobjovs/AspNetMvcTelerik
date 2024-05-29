@@ -28,11 +28,8 @@ jobs:
 
       - name: Navigate to Workspace
         run: |
+          cd ContosoUniversity
           dir
-          cd $GITHUB_WORKSPACE
-          dir
-          # cd ContosoUniversity
-          # dir
 
       - name: Restore Packages
         run: nuget restore ContosoUniversity.sln
@@ -42,5 +39,5 @@ jobs:
           msbuild.exe ContosoUniversity.sln /p:platform="Any CPU" /p:configuration="Debug"
         
       - name: Run Tests
-        run: vstest.console.exe .\ContosoUniversity\**.Tests.dll
+        run: vstest.console.exe **.Tests.dll
 
