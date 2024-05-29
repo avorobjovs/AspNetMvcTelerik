@@ -32,7 +32,9 @@ jobs:
           dir
 
       - name: Restore Packages
-        run: nuget restore ContosoUniversity.sln
+        run: |
+          dir
+          nuget restore ContosoUniversity.sln
 
       - name: Build Solution
         run: |
