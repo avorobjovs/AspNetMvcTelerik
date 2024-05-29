@@ -28,8 +28,11 @@ jobs:
 
       - name: Navigate to Workspace
         run: |
+          dir
           cd $GITHUB_WORKSPACE
+          dir
           cd ContosoUniversity
+          dir
 
       - name: Restore Packages
         run: nuget restore ContosoUniversity.sln
